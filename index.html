@@ -3,110 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coco-Cold | Tinh chất thuần khiết</title>
+    <title>Copuree - Tinh Túy Dừa Thủ Công</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Sử dụng font Serif cho tiêu đề để giống hình mẫu -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
+    <!-- MÀN 1: HERO - KHỞI ĐẦU TINH KHIẾT -->
+    <section class="hero">
         <nav class="container">
-            <div class="logo">COCO-COLD</div>
+            <div class="logo">COPUREE</div>
             <ul class="nav-links">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#" class="active">Câu chuyện</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#story">Câu chuyện</a></li>
+                <li><a href="#process">Quy trình</a></li>
+                <li><a href="#benefit">Công dụng</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
             </ul>
-            <div class="nav-icons">
-                <span>🔍</span>
-                <span>👤</span>
-            </div>
         </nav>
-    </header>
+        <div class="hero-content container">
+            <span class="tag">EST. 2026</span>
+            <h1>Giọt vàng từ <br><em>lòng đất mẹ</em></h1>
+            <p>Dầu dừa nguyên chất ép lạnh - Gói trọn tinh túy và hơi thở của vùng đất Cù Lao.</p>
+            <a href="#story" class="scroll-down">Cuộn để khám phá ↓</a>
+        </div>
+    </section>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1590005354167-6da97870c757?auto=format&fit=crop&q=80&w=2000');">
+    <!-- MÀN 2: TRIẾT LÝ THƯƠNG HIỆU (Referencing image_af37ff.png style) -->
+    <section id="story" class="story container">
+        <div class="story-grid">
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1615485240384-5423452c9c5a?q=80&w=1000" alt="Dừa tươi">
+                <div class="image-label">Bến Tre, Việt Nam</div>
+            </div>
+            <div class="story-text">
+                <h2>Sinh ra từ sự chân thật</h2>
+                <p>Copuree không chỉ là một tên gọi, đó là sự kết hợp giữa "Coconut" và "Purity". Chúng tôi tin rằng những gì tốt nhất cho cơ thể phải đến từ những gì nguyên bản nhất.</p>
+                <p>Tại vùng đất Bến Tre, mỗi trái dừa được lựa chọn đều mang trong mình vị mặn của phù sa và sự ngọt ngào của nắng gió miền Tây.</p>
+                <blockquote class="accent-quote">
+                    "Chúng tôi giữ lại những gì thiên nhiên ban tặng, không thêm thắt, không tẩy xóa."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÀN 3: QUY TRÌNH 3 BƯỚC ĐẶC TRƯNG (Referencing image_af381b.png style) -->
+    <section id="process" class="process">
         <div class="container">
-            <p class="subtitle">VỀ VỚI BẾN TRE</p>
-            <h1>Tinh chất thuần khiết nhất <br> Bến Tre</h1>
-            <p>Từ những mầm mống tâm huyết của vùng đất Cù Lao.</p>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="story container">
-        <div class="story-content">
-            <h2>Sinh ra từ sông Mê Kông</h2>
-            <p>Hành trình của chúng tôi bắt đầu từ những vườn dừa tại Bến Tre, nơi dòng sông Mê Kông bồi đắp phù sa màu mỡ. Những sản phẩm tinh túy nhất được kết tinh từ sự am hiểu về thiên nhiên và tâm huyết của người nông dân.</p>
-            <blockquote class="quote">
-                "Chúng tôi không chỉ bán dừa, chúng tôi bán lời kể của dòng sông."
-            </blockquote>
-        </div>
-        <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&q=80&w=800" alt="Rừng dừa">
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values container">
-        <div class="value-card">
-            <span class="icon">🌿</span>
-            <h3>Đặc tính tự nhiên</h3>
-            <p>Từ những vườn dừa hữu cơ, quy trình thu hoạch thủ công đảm bảo độ tươi mới nhất.</p>
-        </div>
-        <div class="value-card">
-            <span class="icon">🏠</span>
-            <h3>Thương hiệu hàng đầu</h3>
-            <p>Chúng tôi tự hào là đơn vị tiên phong trong việc giữ gìn giá trị truyền thống.</p>
-        </div>
-        <div class="value-card">
-            <span class="icon">💧</span>
-            <h3>Độ tinh khiết cao</h3>
-            <p>Sản phẩm không pha tạp, không chất bảo quản, giữ trọn hương vị nguyên bản.</p>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta container">
-        <div class="cta-box">
-            <h2>Hương vị di sản Mê Kông</h2>
-            <p>Hãy tham gia hành trình cùng chúng tôi để trải nghiệm sự tinh túy từ lòng đất mẹ.</p>
-            <div class="cta-buttons">
-                <button class="btn-white">Mua ngay</button>
-                <button class="btn-outline">Khám phá thêm</button>
+            <div class="section-header">
+                <h2>Bí mật của giọt dầu trong vắt</h2>
+                <p>Quy trình ép lạnh 24 giờ giữ trọn vẹn vitamin và dưỡng chất.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>COCO-COLD</h3>
-                <p>Mang hương vị tự nhiên từ Bến Tre đến bàn ăn của mọi gia đình Việt.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Sản phẩm</h4>
-                <a href="#">Dừa xiêm</a>
-                <a href="#">Dầu dừa</a>
-            </div>
-            <div class="footer-links">
-                <h4>Thương hiệu</h4>
-                <a href="#">Câu chuyện</a>
-                <a href="#">Phát triển</a>
-            </div>
-            <div class="footer-newsletter">
-                <h4>Bản tin</h4>
-                <p>Đăng ký nhận thông tin mới nhất.</p>
-                <div class="subscribe">
-                    <input type="email" placeholder="Email của bạn">
-                    <button>Gửi</button>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <h3>Tuyển chọn thủ công</h3>
+                    <p>Chỉ những trái dừa già đủ tháng mới được đưa vào sản xuất để đảm bảo hàm lượng acid lauric cao nhất.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <h3>Ép lạnh ly tâm</h3>
+                    <p>Công nghệ không gia nhiệt, giúp dầu giữ được mùi thơm dịu nhẹ đặc trưng thay vì mùi nồng của dầu nấu thủ công.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <h3>Lọc tinh 3 lớp</h3>
+                    <p>Hệ thống lọc thẩm thấu giúp loại bỏ hoàn toàn tạp chất, đem lại màu sắc trong suốt như nước mùa thu.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- MÀN 4: HÌNH ẢNH CẢM HỨNG (Visual Break) -->
+    <section class="visual-break" style="background-image: url('https://images.unsplash.com/photo-1590005354167-6da97870c757?q=80&w=2000');">
+    </section>
+
+    <!-- MÀN 5: CÔNG DỤNG ĐA NĂNG -->
+    <section id="benefit" class="benefits container">
+        <div class="benefit-row">
+            <div class="benefit-item">
+                <div class="benefit-icon">✨</div>
+                <h3>Dưỡng da thuần chay</h3>
+                <p>Thẩm thấu sâu, cấp ẩm tức thì và tạo lớp màng bảo vệ da khỏi tác động môi trường.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🌿</div>
+                <h3>Suối tóc mây</h3>
+                <p>Phục hồi hư tổn từ sâu bên trong lõi tóc, đem lại vẻ bóng mượt tự nhiên.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🍽️</div>
+                <h3>Gia vị sức khỏe</h3>
+                <p>Chịu được nhiệt độ cao, là lựa chọn thay thế hoàn hảo cho các loại dầu ăn công nghiệp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÀN 6: CAM KẾT XANH (Newsletter style from image_af381b.png) -->
+    <section class="commitment container">
+        <div class="green-card">
+            <h2>Kết nối với Copuree</h2>
+            <p>Để nhận những bí quyết làm đẹp từ thiên nhiên và câu chuyện bền vững hàng tuần.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Địa chỉ email của bạn...">
+                <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- MÀN 7: FOOTER -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h2 class="logo">COPUREE</h2>
+                <p>Xưởng sản xuất: Giồng Trôm, Bến Tre.<br>Văn phòng: Quận 1, TP. Hồ Chí Minh.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Khám phá</h4>
+                    <ul>
+                        <li><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Nguồn gốc</a></li>
+                        <li><a href="#">Tác động xã hội</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Copuree Vietnam. Bản quyền thuộc về vẻ đẹp thuần khiết.</p>
         </div>
     </footer>
 
