@@ -1,0 +1,224 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcfaf5; /* Màu nền kem nhạt từ hình mẫu */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1a3a32; /* Màu xanh đậm đặc trưng */
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #2d5a4c;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    color: #2d5a4c;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.hero .subtitle {
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
+
+/* Story Section */
+.story {
+    padding: 100px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.story h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.quote {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #2d5a4c;
+    font-style: italic;
+    color: #2d5a4c;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 20px 20px 0px #e8e2d6;
+}
+
+/* Values Section */
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 80px 20px;
+}
+
+.value-card {
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.value-card .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta {
+    padding-bottom: 100px;
+}
+
+.cta-box {
+    background-color: #4a8a7a; /* Màu teal đặc trưng từ image_af381b.png */
+    padding: 80px;
+    text-align: center;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.cta-box h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-white {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    color: #4a8a7a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-outline {
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    padding: 80px 0 40px;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+}
+
+.footer-links h4, .footer-newsletter h4 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.footer-links a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.subscribe {
+    display: flex;
+    margin-top: 15px;
+}
+
+.subscribe input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    background: #2d5a4c;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
