@@ -148,6 +148,9 @@
             max-width: 100%;
             border-radius: 48px 20px 60px 20px;
             box-shadow: 25px 25px 30px -18px rgba(0,0,0,0.2);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
         /* card grid chung */
@@ -180,6 +183,17 @@
             box-shadow: 0 20px 25px -12px rgba(85, 55, 25, 0.12);
         }
 
+        .product-img {
+            width: 100%;
+            max-width: 160px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 24px;
+            margin: 0 auto 16px;
+            display: block;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
         .product-price {
             font-weight: 700;
             font-size: 1.35rem;
@@ -192,6 +206,16 @@
             margin-bottom: 16px;
         }
 
+        .ing-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: block;
+            border: 3px solid #E2C7A6;
+        }
+
         /* công thức recipe */
         .recipe-card {
             background: #FFFCF7;
@@ -199,6 +223,12 @@
             overflow: hidden;
             box-shadow: 0 8px 18px rgba(0,0,0,0.04);
             transition: 0.2s;
+        }
+
+        .recipe-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
         .recipe-card .content {
@@ -220,11 +250,20 @@
             border: 1px solid #F0E2D2;
         }
 
+        .review-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 12px;
+            border: 3px solid #D9B48B;
+        }
+
         .stars {
             color: #F5B642;
             font-size: 1.3rem;
             letter-spacing: 3px;
-            margin-bottom: 16px;
+            margin: 12px 0;
         }
 
         .quote {
@@ -246,6 +285,13 @@
             background: #FFFDF9;
             border-radius: 24px;
             padding: 20px;
+            transition: 0.2s;
+        }
+        .partner-img {
+            width: 110px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 12px;
         }
 
         /* contact */
@@ -374,16 +420,6 @@
             height: auto;
             display: block;
         }
-        .fake-img {
-            background: #E9DBCB;
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7C5F3E;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
     </style>
 </head>
 <body>
@@ -401,7 +437,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 340'%3E%3Crect width='400' height='340' fill='%23F9E6D2'/%3E%3Ccircle cx='170' cy='150' r='70' fill='%23C5946C'/%3E%3Ccircle cx='210' cy='135' r='50' fill='%23A97548'/%3E%3Cpath d='M130 230 L200 310 L270 230 Z' fill='%238C623C'/%3E%3Ctext x='150' y='280' font-size='22' fill='%234C321C' font-weight='bold'%3E🥥 Dầu Dừa%3C/text%3E%3C/svg%3E" alt="dầu dừa và dừa">
+            <img src="https://images.unsplash.com/photo-1621439149468-3f6394fdcbdb?w=600&h=450&fit=crop" alt="Dầu dừa nguyên chất và dừa tươi" loading="lazy">
         </div>
     </div>
 </section>
@@ -414,9 +450,21 @@
             <p>Chỉ chọn những trái dừa già, cơm dày, được trồng theo tiêu chuẩn hữu cơ tại Bến Tre – nơi tinh hoa dừa Việt.</p>
         </div>
         <div class="grid-3">
-            <div class="card-white"><div class="ing-icon">🥥🌿</div><h3>Dừa già hữu cơ</h3><p>Trái dừa 12-14 tháng tuổi, hàm lượng dầu cao, không dư lượng thuốc trừ sâu.</p></div>
-            <div class="card-white"><div class="ing-icon">💧🍃</div><h3>Phương pháp ép lạnh</h3><p>Ép cơ học dưới 45°C, bảo toàn vitamin E, axit lauric và các khoáng chất quý.</p></div>
-            <div class="card-white"><div class="ing-icon">🌱✨</div><h3>Không chất bảo quản</h3><p>100% thuần khiết, không pha tạp, không hương liệu, cam kết nguyên bản từ thiên nhiên.</p></div>
+            <div class="card-white">
+                <img class="ing-img" src="https://images.unsplash.com/photo-1581627102389-6b5d7a63fddb?w=150&h=150&fit=crop" alt="Dừa già hữu cơ">
+                <h3>🥥 Dừa già hữu cơ</h3>
+                <p>Trái dừa 12-14 tháng tuổi, hàm lượng dầu cao, không dư lượng thuốc trừ sâu.</p>
+            </div>
+            <div class="card-white">
+                <img class="ing-img" src="https://images.unsplash.com/photo-1615485500704-8e990f717da6?w=150&h=150&fit=crop" alt="Ép lạnh dầu dừa">
+                <h3>💧 Ép lạnh tự nhiên</h3>
+                <p>Ép cơ học dưới 45°C, bảo toàn vitamin E, axit lauric và các khoáng chất quý.</p>
+            </div>
+            <div class="card-white">
+                <img class="ing-img" src="https://images.unsplash.com/photo-1594759765312-5ec26b5d603d?w=150&h=150&fit=crop" alt="100% tự nhiên">
+                <h3>🌱 Không chất bảo quản</h3>
+                <p>100% thuần khiết, không pha tạp, không hương liệu, cam kết nguyên bản từ thiên nhiên.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -429,9 +477,18 @@
             <p>Biến tấu cùng dầu dừa cho bữa ăn lành mạnh và quy trình chăm sóc cơ thể mỗi ngày</p>
         </div>
         <div class="grid-3">
-            <div class="recipe-card"><div class="content"><h3>🥗 Sốt dầu dừa chanh leo</h3><p>Trộn 3 muỗng dầu dừa + nước cốt chanh + mật ong, ăn kèm salad rau củ, tăng hấp thu vitamin.</p></div></div>
-            <div class="recipe-card"><div class="content"><h3>💆 Mặt nạ dưỡng tóc óng mượt</h3><p>Ủ tóc với dầu dừa + mật ong + bơ, ủ 30 phút giúp tóc chắc khỏe, giảm gãy rụng.</p></div></div>
-            <div class="recipe-card"><div class="content"><h3>🍛 Cà ri chay nước cốt dừa</h3><p>Sử dụng nước cốt dừa tươi + dầu dừa phi thơm, món cà ri đậm vị nhiệt đới.</p></div></div>
+            <div class="recipe-card">
+                <img class="recipe-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=250&fit=crop" alt="Salad dầu dừa">
+                <div class="content"><h3>🥗 Sốt dầu dừa chanh leo</h3><p>Trộn 3 muỗng dầu dừa + nước cốt chanh + mật ong, ăn kèm salad rau củ, tăng hấp thu vitamin.</p></div>
+            </div>
+            <div class="recipe-card">
+                <img class="recipe-img" src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=500&h=250&fit=crop" alt="Mặt nạ dưỡng tóc">
+                <div class="content"><h3>💆 Mặt nạ dưỡng tóc óng mượt</h3><p>Ủ tóc với dầu dừa + mật ong + bơ, ủ 30 phút giúp tóc chắc khỏe, giảm gãy rụng.</p></div>
+            </div>
+            <div class="recipe-card">
+                <img class="recipe-img" src="https://images.unsplash.com/photo-1585937421614-70a008356fbe?w=500&h=250&fit=crop" alt="Cà ri chay nước cốt dừa">
+                <div class="content"><h3>🍛 Cà ri chay nước cốt dừa</h3><p>Sử dụng nước cốt dừa tươi + dầu dừa phi thơm, món cà ri đậm vị nhiệt đới.</p></div>
+            </div>
         </div>
     </div>
 </section>
@@ -444,10 +501,34 @@
             <p>Đa dạng chọn lọc – phục vụ nhu cầu làm đẹp, nấu ăn, chăm sóc sức khỏe</p>
         </div>
         <div class="grid-4">
-            <div class="card-white"><h3>🍶 Dầu dừa ép lạnh</h3><div class="product-price">125.000đ / 200ml</div><p>Tinh khiết, thơm nhẹ, dùng dưỡng da, pha chế.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Đặt mua</a></div>
-            <div class="card-white"><h3>🧴 Dầu gội dưỡng sinh dừa</h3><div class="product-price">99.000đ / 300ml</div><p>Với tinh chất dầu dừa, bồ kết, giảm gàu.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Mua ngay</a></div>
-            <div class="card-white"><h3>🥥 Nước cốt dừa hữu cơ</h3><div class="product-price">69.000đ / 250ml</div><p>Béo ngậy, không chất bảo quản.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Đặt hàng</a></div>
-            <div class="card-white"><h3>🍪 Bơ dừa thuần khiết</h3><div class="product-price">155.000đ / 200g</div><p>Thay thế bơ động vật, giàu năng lượng.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Mua liền</a></div>
+            <div class="card-white">
+                <img class="product-img" src="https://images.unsplash.com/photo-1615466775799-3321916a912f?w=200&h=160&fit=crop" alt="Dầu dừa ép lạnh">
+                <h3>🍶 Dầu dừa ép lạnh</h3>
+                <div class="product-price">125.000đ / 200ml</div>
+                <p>Tinh khiết, thơm nhẹ, dùng dưỡng da, pha chế.</p>
+                <a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Đặt mua</a>
+            </div>
+            <div class="card-white">
+                <img class="product-img" src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=200&h=160&fit=crop" alt="Dầu gội dưỡng sinh dừa">
+                <h3>🧴 Dầu gội dưỡng sinh dừa</h3>
+                <div class="product-price">99.000đ / 300ml</div>
+                <p>Với tinh chất dầu dừa, bồ kết, giảm gàu.</p>
+                <a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Mua ngay</a>
+            </div>
+            <div class="card-white">
+                <img class="product-img" src="https://images.unsplash.com/photo-1567701709890-4f2d583a8f84?w=200&h=160&fit=crop" alt="Nước cốt dừa hữu cơ">
+                <h3>🥥 Nước cốt dừa hữu cơ</h3>
+                <div class="product-price">69.000đ / 250ml</div>
+                <p>Béo ngậy, không chất bảo quản.</p>
+                <a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Đặt hàng</a>
+            </div>
+            <div class="card-white">
+                <img class="product-img" src="https://images.unsplash.com/photo-1627139850874-b4823b25cb42?w=200&h=160&fit=crop" alt="Bơ dừa thuần khiết">
+                <h3>🍪 Bơ dừa thuần khiết</h3>
+                <div class="product-price">155.000đ / 200g</div>
+                <p>Thay thế bơ động vật, giàu năng lượng.</p>
+                <a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Mua liền</a>
+            </div>
         </div>
     </div>
 </section>
@@ -460,10 +541,10 @@
             <p>Chúng tôi hợp tác cùng các thương hiệu uy tín, hệ thống cửa hàng organic và nhà bán lẻ toàn quốc</p>
         </div>
         <div class="grid-4">
-            <div class="partner-logo"><span style="font-size:2.5rem;">🌿 Organic Food</span><p>Chuỗi thực phẩm sạch</p></div>
-            <div class="partner-logo"><span style="font-size:2.5rem;">🏪</span><p>Siêu thị GreenLife</p></div>
-            <div class="partner-logo"><span style="font-size:2.5rem;">🌾</span><p>Hợp tác xã dừa Bến Tre</p></div>
-            <div class="partner-logo"><span style="font-size:2.5rem;">📦</span><p>EcoMart Việt Nam</p></div>
+            <div class="partner-logo"><img class="partner-img" src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Organic Food"><p>Organic Food Store</p></div>
+            <div class="partner-logo"><img class="partner-img" src="https://cdn-icons-png.flaticon.com/512/3059/3059532.png" alt="GreenLife"><p>Siêu thị GreenLife</p></div>
+            <div class="partner-logo"><img class="partner-img" src="https://cdn-icons-png.flaticon.com/512/1047/1047505.png" alt="Hợp tác xã dừa"><p>Hợp tác xã Bến Tre</p></div>
+            <div class="partner-logo"><img class="partner-img" src="https://cdn-icons-png.flaticon.com/512/2331/2331968.png" alt="EcoMart"><p>EcoMart Việt Nam</p></div>
         </div>
         <div style="text-align:center; margin-top:40px;"><p style="background:#F9EFE2; padding:14px 20px; border-radius:60px; display:inline-block;">🌟 Trở thành đối tác của chúng tôi – Liên hệ ngay để nhận bảng giá sỉ ưu đãi</p></div>
     </div>
@@ -477,9 +558,24 @@
             <p>Hàng nghìn phản hồi tích cực và sự tin tưởng từ người dùng</p>
         </div>
         <div class="grid-3">
-            <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Tôi dùng dầu dừa để dưỡng tóc và bôi da sau sinh, làn da mềm mại, tóc chắc khỏe hơn hẳn. Rất thích mùi thơm tự nhiên!"</p><p class="customer-name">- Chị Thanh Hương, Hà Nội</p></div>
-            <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Sản phẩm nước cốt dừa dùng nấu cà ri ngon xuất sắc, béo nhưng không ngấy. Giao hàng nhanh, đóng gói cẩn thận."</p><p class="customer-name">- Anh Minh Đức, TP.HCM</p></div>
-            <div class="review-card"><div class="stars">★★★★☆</div><p class="quote">"Tôi mua dầu dừa ép lạnh để làm dầu gội, hiệu quả giảm rụng tóc rõ rệt sau 1 tháng. Sẽ ủng hộ dài lâu."</p><p class="customer-name">- Chị Hồng Vân, Đà Nẵng</p></div>
+            <div class="review-card">
+                <img class="review-avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="avatar">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Tôi dùng dầu dừa để dưỡng tóc và bôi da sau sinh, làn da mềm mại, tóc chắc khỏe hơn hẳn. Rất thích mùi thơm tự nhiên!"</p>
+                <p class="customer-name">- Chị Thanh Hương, Hà Nội</p>
+            </div>
+            <div class="review-card">
+                <img class="review-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Sản phẩm nước cốt dừa dùng nấu cà ri ngon xuất sắc, béo nhưng không ngấy. Giao hàng nhanh, đóng gói cẩn thận."</p>
+                <p class="customer-name">- Anh Minh Đức, TP.HCM</p>
+            </div>
+            <div class="review-card">
+                <img class="review-avatar" src="https://randomuser.me/api/portraits/women/45.jpg" alt="avatar">
+                <div class="stars">★★★★☆</div>
+                <p class="quote">"Tôi mua dầu dừa ép lạnh để làm dầu gội, hiệu quả giảm rụng tóc rõ rệt sau 1 tháng. Sẽ ủng hộ dài lâu."</p>
+                <p class="customer-name">- Chị Hồng Vân, Đà Nẵng</p>
+            </div>
         </div>
     </div>
 </section>
