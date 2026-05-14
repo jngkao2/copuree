@@ -2,142 +2,539 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copuree | Hành Trình Giọt Dầu Tinh Khiết</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Dầu Dừa Nguyên Chất | Tinh hoa từ dừa Việt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+            background-color: #FEFAF5;
+            color: #2E241F;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        section {
+            padding: 72px 0;
+        }
+
+        .bg-cream {
+            background-color: #FFF8EF;
+        }
+
+        .bg-softgreen {
+            background-color: #F4F9EE;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2D3E2B;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #6A5A48;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #E2C7A6;
+            color: #3E2A1C;
+            font-weight: 600;
+            padding: 6px 20px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(120deg, #FDF3E4 0%, #F9EAD8 100%);
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .hero-content {
+            flex: 1 1 50%;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #3B2A1A;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: #B96F30;
+            border-bottom: 3px solid #E2BC8B;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: #5A4A36;
+            margin-bottom: 32px;
+            max-width: 550px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            background-color: #B96F30;
+            color: white;
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 60px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.25s;
+            box-shadow: 0 6px 14px rgba(185, 111, 48, 0.25);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #8F4E1E;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #B96F30;
+            color: #B96F30;
+            padding: 10px 30px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #B96F30;
+            color: white;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 48px 20px 60px 20px;
+            box-shadow: 25px 25px 30px -18px rgba(0,0,0,0.2);
+        }
+
+        /* card grid chung */
+        .grid-3, .grid-4 {
+            display: grid;
+            gap: 32px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .card-white {
+            background: white;
+            border-radius: 32px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: 0.25s;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+            border: 1px solid #F0E2D2;
+        }
+
+        .card-white:hover {
+            transform: translateY(-6px);
+            border-color: #D9B48B;
+            box-shadow: 0 20px 25px -12px rgba(85, 55, 25, 0.12);
+        }
+
+        .product-price {
+            font-weight: 700;
+            font-size: 1.35rem;
+            color: #C27E3A;
+            margin: 12px 0;
+        }
+
+        .ing-icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        /* công thức recipe */
+        .recipe-card {
+            background: #FFFCF7;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+            transition: 0.2s;
+        }
+
+        .recipe-card .content {
+            padding: 24px;
+        }
+
+        .recipe-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+            color: #3A2B1D;
+        }
+
+        /* review */
+        .review-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #F0E2D2;
+        }
+
+        .stars {
+            color: #F5B642;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #4A3C2C;
+            margin: 16px 0;
+        }
+
+        .customer-name {
+            font-weight: 600;
+            color: #B96F30;
+        }
+
+        /* partner */
+        .partner-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #FFFDF9;
+            border-radius: 24px;
+            padding: 20px;
+        }
+
+        /* contact */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #FFFBF5;
+            border-radius: 48px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+        }
+
+        .contact-info {
+            flex: 1 1 280px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+        }
+
+        .contact-form {
+            flex: 2 1 360px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 60px;
+            border: 1px solid #E1CFBC;
+            background: white;
+            font-family: inherit;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        textarea {
+            border-radius: 28px;
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #B96F30;
+            box-shadow: 0 0 0 2px rgba(185,111,48,0.2);
+        }
+
+        .btn-submit {
+            background: #B96F30;
+            border: none;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: #2D3E2B;
+            color: #F0E6DA;
+            padding: 48px 0 32px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 20px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .footer-col {
+            flex: 1 1 200px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+            color: #FFE6C7;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #DDD0C0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #5B6E4A;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 780px) {
+            .hero-title {
+                font-size: 2.3rem;
+            }
+            section {
+                padding: 50px 0;
+            }
+            .contact-grid {
+                padding: 28px;
+            }
+            .footer-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .fake-img {
+            background: #E9DBCB;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7C5F3E;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- PAGE 1: THE ORIGIN (HERO) -->
-    <section class="page hero-section">
-        <header>
-            <nav class="container">
-                <div class="logo">COPUREE</div>
-                <ul class="nav-links">
-                    <li><a href="#about">Khởi nguồn</a></li>
-                    <li><a href="#process">Quy trình</a></li>
-                    <li><a href="#benefits">Giá trị</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="hero-content container">
-            <h1 class="fade-in">Tinh túy từ <br><em>ngàn năm đất mẹ</em></h1>
-            <p>Dầu dừa Copuree - Sự giao thoa giữa truyền thống và tinh hoa công nghệ ép lạnh.</p>
-        </div>
-    </section>
-
-    <!-- PAGE 2: THE PHILOSOPHY (Referencing image_af37ff.png) -->
-    <section id="about" class="page philosophy">
-        <div class="container split-layout">
-            <div class="text-block">
-                <span class="section-tag">01. Triết lý</span>
-                <h2>Vẻ đẹp đến từ <br>sự nguyên bản</h2>
-                <p>Tại Copuree, chúng tôi tin rằng không có gì hoàn hảo hơn những gì tự nhiên đã ban tặng. Dầu dừa của chúng tôi không trải qua quá trình tẩy màu hay khử mùi hóa học.</p>
-                <blockquote class="italic-quote">"Sự tinh khiết không phải là thêm vào, mà là giữ lại toàn vẹn."</blockquote>
-            </div>
-            <div class="image-block">
-                <img src="https://images.unsplash.com/photo-1590005354167-6da97870c757?q=80&w=800" alt="Dừa tươi trên cát">
+<!-- HOME (giới thiệu sơ lược cơ bản) -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <div class="badge">🌴 100% thiên nhiên từ trái dừa tươi</div>
+            <h1 class="hero-title">Dầu dừa <span>nguyên chất</span><br> tinh khiết & đa dụng</h1>
+            <p class="hero-desc">Chúng tôi mang đến những sản phẩm từ dừa hữu cơ, ép lạnh giữ trọn dưỡng chất, phục vụ làm đẹp, ẩm thực và sức khỏe. Thân thiện với môi trường và lành tính cho mọi nhà.</p>
+            <div class="btn-group">
+                <a href="#products" class="btn-primary">🛒 Khám phá sản phẩm</a>
+                <a href="#contact" class="btn-outline">📞 Liên hệ ngay</a>
             </div>
         </div>
-    </section>
-
-    <!-- PAGE 3: THE SOIL (Bến Tre Context) -->
-    <section class="page soil-context">
-        <div class="full-bg-text container">
-            <h2>Vùng đất Cù Lao</h2>
-            <p>Mỗi trái dừa Copuree đều mang trong mình hơi thở của dòng sông Mê Kông và vị mặn mòi của phù sa Bến Tre.</p>
+        <div class="hero-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 340'%3E%3Crect width='400' height='340' fill='%23F9E6D2'/%3E%3Ccircle cx='170' cy='150' r='70' fill='%23C5946C'/%3E%3Ccircle cx='210' cy='135' r='50' fill='%23A97548'/%3E%3Cpath d='M130 230 L200 310 L270 230 Z' fill='%238C623C'/%3E%3Ctext x='150' y='280' font-size='22' fill='%234C321C' font-weight='bold'%3E🥥 Dầu Dừa%3C/text%3E%3C/svg%3E" alt="dầu dừa và dừa">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- PAGE 4: THE HARVEST (Manual Process) -->
-    <section class="page harvest">
-        <div class="container split-layout reverse">
-            <div class="text-block">
-                <span class="section-tag">02. Thu hoạch</span>
-                <h2>Tuyển chọn <br>từng nhịp thở</h2>
-                <p>Chúng tôi chỉ chọn những trái dừa "đủ tuổi" – khi lớp cơm dừa đã đạt độ dày và hàm lượng dầu cao nhất. Quá trình này được thực hiện hoàn toàn thủ công bởi những người nông dân lành nghề.</p>
+<!-- NGUYÊN LIỆU -->
+<section id="nguyenlieu" class="bg-cream">
+    <div class="container">
+        <div class="section-header">
+            <h2>🌾 Nguyên liệu sạch – từ những vườn dừa hữu cơ</h2>
+            <p>Chỉ chọn những trái dừa già, cơm dày, được trồng theo tiêu chuẩn hữu cơ tại Bến Tre – nơi tinh hoa dừa Việt.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card-white"><div class="ing-icon">🥥🌿</div><h3>Dừa già hữu cơ</h3><p>Trái dừa 12-14 tháng tuổi, hàm lượng dầu cao, không dư lượng thuốc trừ sâu.</p></div>
+            <div class="card-white"><div class="ing-icon">💧🍃</div><h3>Phương pháp ép lạnh</h3><p>Ép cơ học dưới 45°C, bảo toàn vitamin E, axit lauric và các khoáng chất quý.</p></div>
+            <div class="card-white"><div class="ing-icon">🌱✨</div><h3>Không chất bảo quản</h3><p>100% thuần khiết, không pha tạp, không hương liệu, cam kết nguyên bản từ thiên nhiên.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- CÔNG THỨC (công thức chế biến / ứng dụng) -->
+<section id="congthuc">
+    <div class="container">
+        <div class="section-header">
+            <h2>🍳 Công thức & ứng dụng tuyệt vời từ dầu dừa</h2>
+            <p>Biến tấu cùng dầu dừa cho bữa ăn lành mạnh và quy trình chăm sóc cơ thể mỗi ngày</p>
+        </div>
+        <div class="grid-3">
+            <div class="recipe-card"><div class="content"><h3>🥗 Sốt dầu dừa chanh leo</h3><p>Trộn 3 muỗng dầu dừa + nước cốt chanh + mật ong, ăn kèm salad rau củ, tăng hấp thu vitamin.</p></div></div>
+            <div class="recipe-card"><div class="content"><h3>💆 Mặt nạ dưỡng tóc óng mượt</h3><p>Ủ tóc với dầu dừa + mật ong + bơ, ủ 30 phút giúp tóc chắc khỏe, giảm gãy rụng.</p></div></div>
+            <div class="recipe-card"><div class="content"><h3>🍛 Cà ri chay nước cốt dừa</h3><p>Sử dụng nước cốt dừa tươi + dầu dừa phi thơm, món cà ri đậm vị nhiệt đới.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- TRANG SẢN PHẨM -->
+<section id="products" class="bg-softgreen">
+    <div class="container">
+        <div class="section-header">
+            <h2>🛍️ Sản phẩm từ dừa & dầu dừa cao cấp</h2>
+            <p>Đa dạng chọn lọc – phục vụ nhu cầu làm đẹp, nấu ăn, chăm sóc sức khỏe</p>
+        </div>
+        <div class="grid-4">
+            <div class="card-white"><h3>🍶 Dầu dừa ép lạnh</h3><div class="product-price">125.000đ / 200ml</div><p>Tinh khiết, thơm nhẹ, dùng dưỡng da, pha chế.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Đặt mua</a></div>
+            <div class="card-white"><h3>🧴 Dầu gội dưỡng sinh dừa</h3><div class="product-price">99.000đ / 300ml</div><p>Với tinh chất dầu dừa, bồ kết, giảm gàu.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Mua ngay</a></div>
+            <div class="card-white"><h3>🥥 Nước cốt dừa hữu cơ</h3><div class="product-price">69.000đ / 250ml</div><p>Béo ngậy, không chất bảo quản.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Đặt hàng</a></div>
+            <div class="card-white"><h3>🍪 Bơ dừa thuần khiết</h3><div class="product-price">155.000đ / 200g</div><p>Thay thế bơ động vật, giàu năng lượng.</p><a href="#" class="btn-primary" style="padding:8px 20px; font-size:0.85rem;">Mua liền</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- TRANG HỢP TÁC ĐỐI TÁC -->
+<section id="partners">
+    <div class="container">
+        <div class="section-header">
+            <h2>🤝 Đối tác chiến lược & nhà phân phối</h2>
+            <p>Chúng tôi hợp tác cùng các thương hiệu uy tín, hệ thống cửa hàng organic và nhà bán lẻ toàn quốc</p>
+        </div>
+        <div class="grid-4">
+            <div class="partner-logo"><span style="font-size:2.5rem;">🌿 Organic Food</span><p>Chuỗi thực phẩm sạch</p></div>
+            <div class="partner-logo"><span style="font-size:2.5rem;">🏪</span><p>Siêu thị GreenLife</p></div>
+            <div class="partner-logo"><span style="font-size:2.5rem;">🌾</span><p>Hợp tác xã dừa Bến Tre</p></div>
+            <div class="partner-logo"><span style="font-size:2.5rem;">📦</span><p>EcoMart Việt Nam</p></div>
+        </div>
+        <div style="text-align:center; margin-top:40px;"><p style="background:#F9EFE2; padding:14px 20px; border-radius:60px; display:inline-block;">🌟 Trở thành đối tác của chúng tôi – Liên hệ ngay để nhận bảng giá sỉ ưu đãi</p></div>
+    </div>
+</section>
+
+<!-- TRANG KHÁCH HÀNG REVIEW -->
+<section id="reviews" class="bg-cream">
+    <div class="container">
+        <div class="section-header">
+            <h2>⭐ Khách hàng nói gì về dầu dừa nguyên chất?</h2>
+            <p>Hàng nghìn phản hồi tích cực và sự tin tưởng từ người dùng</p>
+        </div>
+        <div class="grid-3">
+            <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Tôi dùng dầu dừa để dưỡng tóc và bôi da sau sinh, làn da mềm mại, tóc chắc khỏe hơn hẳn. Rất thích mùi thơm tự nhiên!"</p><p class="customer-name">- Chị Thanh Hương, Hà Nội</p></div>
+            <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Sản phẩm nước cốt dừa dùng nấu cà ri ngon xuất sắc, béo nhưng không ngấy. Giao hàng nhanh, đóng gói cẩn thận."</p><p class="customer-name">- Anh Minh Đức, TP.HCM</p></div>
+            <div class="review-card"><div class="stars">★★★★☆</div><p class="quote">"Tôi mua dầu dừa ép lạnh để làm dầu gội, hiệu quả giảm rụng tóc rõ rệt sau 1 tháng. Sẽ ủng hộ dài lâu."</p><p class="customer-name">- Chị Hồng Vân, Đà Nẵng</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- THÔNG TIN LIÊN HỆ + FORM -->
+<section id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>📬 Liên hệ với chúng tôi</h2>
+            <p>Mọi thắc mắc, hợp tác hoặc đặt hàng, hãy gửi thông tin – chúng tôi sẽ phản hồi nhanh chóng</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Địa chỉ:</strong><br>Làng nghề dừa, Chợ Lách, Bến Tre</div></div>
+                <div class="contact-item"><div class="contact-icon">📞</div><div><strong>Hotline / Zalo:</strong><br>0909 123 456 - (028) 3789 122</div></div>
+                <div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email:</strong><br>cskh@dauduanguyenchat.vn</div></div>
+                <div class="contact-item"><div class="contact-icon">⏰</div><div><strong>Giờ làm việc:</strong><br>8h00 - 20h00 từ thứ 2 đến Chủ nhật</div></div>
             </div>
-            <div class="image-block">
-                <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=800" alt="Dừa xanh">
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="input-group"><input type="text" placeholder="Họ và tên *" required></div>
+                    <div class="input-group"><input type="email" placeholder="Email *" required></div>
+                    <div class="input-group"><input type="tel" placeholder="Số điện thoại"></div>
+                    <div class="input-group"><textarea rows="4" placeholder="Nội dung: hợp tác, đặt hàng, tư vấn..."></textarea></div>
+                    <button type="submit" class="btn-submit">Gửi yêu cầu ➤</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- PAGE 5: THE TECHNOLOGY (Cold Press) -->
-    <section id="process" class="page technology">
-        <div class="container text-center">
-            <span class="section-tag">03. Công nghệ</span>
-            <h2>Ép lạnh ly tâm 24h</h2>
-            <p>Hệ thống khép kín ngăn chặn sự oxy hóa, giữ lại 99% Vitamin E và Acid Lauric – "vàng trắng" cho sức khỏe và sắc đẹp.</p>
-            <div class="tech-visual">
-                <div class="circle-item">Tinh khiết</div>
-                <div class="circle-item active">Copuree</div>
-                <div class="circle-item">Tự nhiên</div>
-            </div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h4>🌴 Dầu Dừa Việt</h4>
+            <p>Chuyên cung cấp dầu dừa nguyên chất và các sản phẩm từ dừa hữu cơ, cam kết chất lượng và minh bạch nguồn gốc.</p>
         </div>
-    </section>
-
-    <!-- PAGE 6: VISUAL BREAK (Product Texture) -->
-    <section class="page texture-shot">
-        <!-- Background image of coconut oil texture -->
-    </section>
-
-    <!-- PAGE 7: BENEFITS - SKIN (Referencing image_af381b.png cards) -->
-    <section id="benefits" class="page benefits-skin">
-        <div class="container">
-            <div class="benefit-card dark">
-                <h2>Liệu trình từ thiên nhiên</h2>
-                <p>Sử dụng dầu dừa mỗi tối để tái tạo làn da, làm mờ vết thâm và mang lại vẻ rạng rỡ thuần khiết.</p>
-                <div class="card-footer">Skin Care / Body Ritual</div>
-            </div>
+        <div class="footer-col">
+            <h4>Chính sách</h4>
+            <p>✓ Đổi trả trong 7 ngày<br>✓ Miễn phí vận chuyển đơn >500k<br>✓ Thanh toán khi nhận hàng</p>
         </div>
-    </section>
-
-    <!-- PAGE 8: THE ECO SYSTEM (Sustainability) -->
-    <section class="page eco-friendly">
-        <div class="container split-layout">
-            <div class="image-block">
-                <img src="https://images.unsplash.com/photo-1615485240384-5423452c9c5a?q=80&w=800" alt="Thủ công">
-            </div>
-            <div class="text-block">
-                <span class="section-tag">04. Bền vững</span>
-                <h2>Không rác thải <br>không tác động</h2>
-                <p>Chúng tôi tận dụng mọi phần của trái dừa: vỏ làm phân bón, gáo làm đồ thủ công, nước dừa làm thức uống dưỡng chất.</p>
-            </div>
+        <div class="footer-col">
+            <h4>Kết nối</h4>
+            <p>Facebook: Dầu Dừa Nguyên Chất<br>Instagram: @dauduaviet<br>TikTok: @dauduathiennhien</p>
         </div>
-    </section>
-
-    <!-- PAGE 9: COMMUNITY (Newsletter) -->
-    <section class="page community">
-        <div class="cta-box container">
-            <h2>Gia nhập cộng đồng <br>sống sạch Copuree</h2>
-            <p>Nhận ngay bộ bí kíp dưỡng nhan 7 ngày bằng dầu dừa nguyên chất.</p>
-            <form class="email-input">
-                <input type="email" placeholder="Email của bạn">
-                <button>→</button>
-            </form>
+        <div class="footer-col">
+            <h4>Thông tin hữu ích</h4>
+            <p>Blog công thức làm đẹp từ dừa<br>Hướng dẫn sử dụng dầu dừa<br>Hợp tác phân phối</p>
         </div>
-    </section>
-
-    <!-- PAGE 10: FOOTER (Referencing image_af381b.png footer) -->
-    <footer class="page footer-section">
-        <div class="container footer-grid">
-            <div class="brand-info">
-                <h2 class="logo">COPUREE</h2>
-                <p>Chất lượng đến từ tâm hồn người làm nghề Bến Tre.</p>
-            </div>
-            <div class="footer-nav">
-                <h4>Về chúng tôi</h4>
-                <ul><li>Nguồn gốc</li><li>Sản phẩm</li><li>Blog</li></ul>
-            </div>
-            <div class="footer-nav">
-                <h4>Liên hệ</h4>
-                <ul><li>Facebook</li><li>Instagram</li><li>Zalo</li></ul>
-            </div>
-        </div>
-        <p class="copyright">© 2026 COPUREE VIETNAM. ALL RIGHTS RESERVED.</p>
-    </footer>
+    </div>
+    <div class="copyright container">
+        <p>© 2025 Dầu dừa nguyên chất – Tinh hoa từ trái dừa. Mọi quyền được bảo lưu. | Thiết kế hướng đến cộng đồng xanh</p>
+    </div>
+</footer>
 
 </body>
 </html>
